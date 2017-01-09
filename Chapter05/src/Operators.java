@@ -22,7 +22,8 @@ public class Operators {
         
         int result = intValue1 * intValue2;
         System.out.println(result);
-        result = intValue2 / intValue1;
+        //result = intValue2 / intValue1;
+        result = intValue1 / intValue2;
         System.out.println(result);
     }
 }
