@@ -8,7 +8,8 @@ public class Operators {
         //sample.compound();
         //sample.unary();
         //sample.increDecre();
-        sample.complement();
+        //sample.complement();
+        sample.comparsion();
     }
     
     public void additive() {
@@ -73,4 +74,23 @@ public class Operators {
         System.out.println(flag);
         System.out.println(!flag);
     }
+    
+    public void comparsion() {
+        int intValue1 = 1;
+        int intValue2 = 2;
+        int intValue3 = 1;
+        System.out.println(intValue1 == intValue2);
+        System.out.println(intValue1 == intValue3);
+        
+        System.out.println(intValue1 != intValue2);
+        System.out.println(intValue1 != intValue3);
+        
+        System.out.println("-------");
+        
+        char charValue = 'a';
+        System.out.println(97 == charValue);
+        double doubleValue = 1.0;
+        System.out.println(intValue1 == doubleValue);
+    }
+    
 }
