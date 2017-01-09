@@ -5,7 +5,8 @@ public class Operators {
         //sample.additive();
         //sample.multiplicative();
         //sample.remainder();
-        sample.compound();
+        //sample.compound();
+        sample.unary();
     }
     
     public void additive() {
@@ -39,7 +40,22 @@ public class Operators {
     public void compound() {
         int intValue1 = 10;
         intValue1 += 5;
-        //intValuel += 5;
         System.out.println(intValue1);
+        intValue1 -= 5;
+        System.out.println(intValue1);
+        intValue1 *= 5;
+        System.out.println(intValue1);
+        intValue1 /= 5;
+        System.out.println(intValue1);
+        intValue1 %= 5;
+        System.out.println(intValue1);
+    }
+    
+    public void unary() {
+        int intValue = -10;
+        int result = +intValue;
+        System.out.println(result);
+        result = -intValue;
+        System.out.println(result);
     }
 }
