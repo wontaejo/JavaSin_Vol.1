@@ -9,7 +9,8 @@ public class Operators {
         //sample.unary();
         //sample.increDecre();
         //sample.complement();
-        sample.comparsion();
+        //sample.comparsion();
+        sample.comparsion2();
     }
     
     public void additive() {
@@ -93,4 +94,13 @@ public class Operators {
         System.out.println(intValue1 == doubleValue);
     }
     
+    public void comparsion2() {
+        int intValue1 = 1;
+        int intValue2 = 2;
+        System.out.println(intValue1 > intValue2);
+        System.out.println(intValue1 < intValue2);
+        
+        System.out.println(intValue1 >= intValue2);
+        System.out.println(intValue1 <= intValue2);
+    }
 }
