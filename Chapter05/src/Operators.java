@@ -7,7 +7,8 @@ public class Operators {
         //sample.remainder();
         //sample.compound();
         //sample.unary();
-        sample.increDecre();
+        //sample.increDecre();
+        sample.complement();
     }
     
     public void additive() {
@@ -65,5 +66,11 @@ public class Operators {
         System.out.println(intValue++);
         System.out.println(intValue);
         System.out.println(++intValue);
+    }
+    
+    public void complement() {
+        boolean flag = true;
+        System.out.println(flag);
+        System.out.println(!flag);
     }
 }
