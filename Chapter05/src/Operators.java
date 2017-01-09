@@ -10,7 +10,8 @@ public class Operators {
         //sample.increDecre();
         //sample.complement();
         //sample.comparsion();
-        sample.comparsion2();
+        //sample.comparsion2();
+        sample.condition();
     }
     
     public void additive() {
@@ -102,5 +103,21 @@ public class Operators {
         
         System.out.println(intValue1 >= intValue2);
         System.out.println(intValue1 <= intValue2);
+    }
+    
+    public void condition() {
+        boolean x = true;
+        boolean y = true;
+        
+        System.out.println(x && y);  // true
+        System.out.println(x || y);  // true
+        System.out.println("-----");
+        x = false;
+        System.out.println(x && y);  // false
+        System.out.println(x || y);  // true
+        System.out.println("-----");
+        y = false;
+        System.out.println(x && y);  // false
+        System.out.println(x || y);  // false
     }
 }
