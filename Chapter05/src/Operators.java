@@ -2,9 +2,10 @@
 public class Operators {
     public static void main(String args[]) {
         Operators sample = new Operators();
-        sample.additive();
-        sample.multiplicative();
-        sample.remainder();
+        //sample.additive();
+        //sample.multiplicative();
+        //sample.remainder();
+        sample.compound();
     }
     
     public void additive() {
@@ -33,5 +34,12 @@ public class Operators {
         int intValue2 = 10;
         int result = intValue1 % intValue2;
         System.out.println(result);
+    }
+    
+    public void compound() {
+        int intValue1 = 10;
+        intValue1 += 5;
+        //intValuel += 5;
+        System.out.println(intValue1);
     }
 }
