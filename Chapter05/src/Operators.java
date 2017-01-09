@@ -6,7 +6,8 @@ public class Operators {
         //sample.multiplicative();
         //sample.remainder();
         //sample.compound();
-        sample.unary();
+        //sample.unary();
+        sample.increDecre();
     }
     
     public void additive() {
@@ -57,5 +58,12 @@ public class Operators {
         System.out.println(result);
         result = -intValue;
         System.out.println(result);
+    }
+    
+    public void increDecre() {
+        int intValue = 1;
+        System.out.println(intValue++);
+        System.out.println(intValue);
+        System.out.println(++intValue);
     }
 }
