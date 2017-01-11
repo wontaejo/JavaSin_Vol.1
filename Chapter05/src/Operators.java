@@ -11,7 +11,12 @@ public class Operators {
         //sample.complement();
         //sample.comparsion();
         //sample.comparsion2();
-        sample.condition();
+        //sample.condition();
+        //sample.doBlindDate(30);
+        //sample.doBlindDate(80);
+        //sample.casting();
+        System.out.println(sample.getMonthlySalary(30000000));
+        //System.out.println(sample.calculateTax(sample.getMonthlySalary(30000000)));
     }
     
     public void additive() {
@@ -119,5 +124,46 @@ public class Operators {
         y = false;
         System.out.println(x && y);  // false
         System.out.println(x || y);  // false
+    }
+    
+    public boolean doBlindDate(int point) {
+        
+        boolean doBlindDateFlag = false;
+        
+        doBlindDateFlag = (point >= 80) ? true : false;
+        System.out.println(point + " : " + doBlindDateFlag);
+        
+        return doBlindDateFlag;
+    }
+    
+    public void casting() {
+        byte byteValue = 127;
+        short shortValue = 256;
+        
+        //shortValue++;
+        System.out.println(shortValue);
+        byteValue = (byte)shortValue;
+        System.out.println(byteValue);
+    }
+    
+    public double getMonthlySalary(int yearlySalary) {
+        double a = 12.0;
+        System.out.println("세금 공제액 : " + calculateTax(yearlySalary / a));
+        return yearlySalary / a; 
+    }
+    
+    public double calculateTax(double monthlySalary) {
+        double gunSalary = 0;
+        double gugSalary = 0;
+        double buSalary = 0;    
+        gunSalary = monthlySalary * 12.5 / 100;
+        gugSalary = monthlySalary * 8.1 / 100;
+        buSalary = monthlySalary * 13.5 / 100;
+        
+        System.out.println("근로 소득세 : " + gunSalary);
+        System.out.println("국민 연금 : " + gugSalary);
+        System.out.println("건강 보험료 : " + buSalary);
+        
+        return gunSalary + gugSalary + buSalary;
     }
 }
