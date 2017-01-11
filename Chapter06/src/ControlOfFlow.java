@@ -4,10 +4,11 @@ public class ControlOfFlow {
         ControlOfFlow control = new ControlOfFlow();
         //control.ifStatement();
         //control.ifStatement2();
-        control.ifStatement3();
+        //control.ifStatement3();
+        control.ifStatement4(90);
     }
     
-    public void ifStatement() {
+    public void control() {
         if(true);
         if(true) System.out.println("It's true");
         if(true)
@@ -40,6 +41,21 @@ public class ControlOfFlow {
         if((age > 25 || isMarried) && height >= 180) {
             System.out.println("Age is over 25 or Married and height is over 180");
         }
+    }
+    
+    public void ifStatement4(int point) {
+        if(point > 90) {
+            System.out.println("A");
+        } else if(point > 80) {
+            System.out.println("B");
+        } else if(point >70) {
+            System.out.println("C");
+        } else if(point > 60) {
+            System.out.println("D");
+        } else {
+            System.out.println("F");
+        }
+        
     }
 }
 
