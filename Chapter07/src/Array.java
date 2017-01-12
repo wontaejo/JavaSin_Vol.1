@@ -1,10 +1,16 @@
 
 public class Array {
+    
+    static String[] month = { "January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "October", "November",
+            "December" };
+    
     public static void main(String[] args) {
         Array array = new Array();
         //array.init();
-        array.primitiveTypes();
+        //array.primitiveTypes();
         //array.referenceTypes();
+        array.otherInit();
     }
     
     public void init() {
@@ -60,5 +66,16 @@ public class Array {
         System.out.println("array[1] = " + array[1]);
         System.out.println("strings = " + strings);
         System.out.println("array = " + array);
+    }
+    
+    public void otherInit() {
+        int[] lottoNumbers = {5, 12, 23, 25, 38, 41, 2};
+        /* ¿¡·¯ 
+        int[] lottoNumbers;
+        lottoNumbers = {5, 12, 23, 25, 38, 41, 2};
+        */
+        String[] month = { "January", "February", "March", "April", "May",
+                "June", "July", "August", "September", "October", "November",
+                "December" };
     }
 }
