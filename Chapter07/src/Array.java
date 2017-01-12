@@ -3,8 +3,8 @@ public class Array {
     public static void main(String[] args) {
         Array array = new Array();
         //array.init();
-        //array.primitiveTypes();
-        array.referenceTypes();
+        array.primitiveTypes();
+        //array.referenceTypes();
     }
     
     public void init() {
@@ -38,6 +38,15 @@ public class Array {
         System.out.println("doubleArray[0]" + doubleArray[0]);
         System.out.println("charArray[0]" + charArray[0]);
         System.out.println("booleanArray[0]" + booleanArray[0]);
+        
+        System.out.println("byteArray" + byteArray);
+        System.out.println("shortArray" + shortArray);
+        System.out.println("intArray" + intArray);
+        System.out.println("longArray" + longArray);
+        System.out.println("floatArray" + floatArray);
+        System.out.println("doubleArray" + doubleArray);
+        System.out.println("charArray" + charArray);
+        System.out.println("booleanArray" + booleanArray);
     }
     
     public void referenceTypes() {
