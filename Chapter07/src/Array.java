@@ -3,7 +3,8 @@ public class Array {
     public static void main(String[] args) {
         Array array = new Array();
         //array.init();
-        array.primitiveTypes();
+        //array.primitiveTypes();
+        array.referenceTypes();
     }
     
     public void init() {
@@ -37,5 +38,18 @@ public class Array {
         System.out.println("doubleArray[0]" + doubleArray[0]);
         System.out.println("charArray[0]" + charArray[0]);
         System.out.println("booleanArray[0]" + booleanArray[0]);
+    }
+    
+    public void referenceTypes() {
+        String[] strings = new String[2];
+        Array[] array = new Array[2];      
+        strings[0] = "Please visit www.GodOfJava.com.";
+        array[0] = new Array();
+        System.out.println("strings[0] = " + strings[0]);
+        System.out.println("strings[1] = " + strings[1]);
+        System.out.println("array[0] = " + array[0]);
+        System.out.println("array[1] = " + array[1]);
+        System.out.println("strings = " + strings);
+        System.out.println("array = " + array);
     }
 }
