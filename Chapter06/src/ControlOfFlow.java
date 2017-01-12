@@ -9,7 +9,8 @@ public class ControlOfFlow {
         //control.switchStatement(1);
         //control.switchStatement2(4);
         //control.whileLoop();
-        control.whileLoop2();
+        //control.whileLoop2();
+        control.forLoop(10);
     }
     
     public void control() {
@@ -125,7 +126,15 @@ public class ControlOfFlow {
             loop++;
             switchStatement2(loop);
         } while(loop < 12);
-       
+     
+    }
+    
+    public void forLoop(int until) {
+        int sum = 0;
+        for(int loop=1; loop<=until; loop++) {
+            sum+=loop;
+        }
+        System.out.println("1 to " + until + " = " + sum);
     }
 }
 
