@@ -7,7 +7,8 @@ public class ControlOfFlow {
         //control.ifStatement3();
         //control.ifStatement4(90);
         //control.switchStatement(1);
-        control.switchStatement2(4);
+        //control.switchStatement2(4);
+        control.whileLoop();
     }
     
     public void control() {
@@ -97,10 +98,23 @@ public class ControlOfFlow {
             System.out.println(month + " has 30 days.");
             break;
         case 2:
-            System.out.println(month + "has 28 or 29 days.");
+            System.out.println(month + " has 28 or 29 days.");
             break;
         default:
             System.out.println(month + " is not a mont");
+        }
+    }
+    
+    public void whileLoop() {
+        int loop = 0;
+        while (loop < 12) {
+            loop++;
+            switchStatement2(loop);
+            /*
+            if(loop >= 6) {
+                break;
+            }
+            */
         }
     }
 }
