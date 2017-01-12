@@ -5,7 +5,8 @@ public class ControlOfFlow {
         //control.ifStatement();
         //control.ifStatement2();
         //control.ifStatement3();
-        control.ifStatement4(90);
+        //control.ifStatement4(90);
+        control.switchStatement(1);
     }
     
     public void control() {
@@ -55,7 +56,26 @@ public class ControlOfFlow {
         } else {
             System.out.println("F");
         }
-        
+    }
+    
+    public void switchStatement(int numberOfWheel) {
+        switch(numberOfWheel) {
+            case 1:
+                System.out.println("It is one foot bicycle.");
+                //break;
+            case 2:
+                System.out.println("It is a motor cycle or bicycle.");
+                //break;
+            case 3:
+                System.out.println("It is a three wheel car.");
+                break;
+            case 4:
+                System.out.println("It is a car.");
+                break;
+            default:
+                System.out.println("It is an expensive car.");
+                break;
+        }
     }
 }
 
