@@ -8,7 +8,8 @@ public class ControlOfFlow {
         //control.ifStatement4(90);
         //control.switchStatement(1);
         //control.switchStatement2(4);
-        control.whileLoop();
+        //control.whileLoop();
+        control.whileLoop2();
     }
     
     public void control() {
@@ -116,6 +117,15 @@ public class ControlOfFlow {
             }
             */
         }
+    }
+    
+    public void whileLoop2() {
+        int loop = 0;
+        do {
+            loop++;
+            switchStatement2(loop);
+        } while(loop < 12);
+       
     }
 }
 
