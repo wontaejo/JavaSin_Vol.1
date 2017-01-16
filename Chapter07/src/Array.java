@@ -6,11 +6,19 @@ public class Array {
             "December" };
     
     public static void main(String[] args) {
+        
+        if(args.length > 0) {
+            for(String arg : args) {
+                System.out.println(arg);
+            }
+        }
+        
         Array array = new Array();
         //array.init();
         //array.primitiveTypes();
         //array.referenceTypes();
-        array.otherInit();
+        //array.otherInit();
+        array.printArrayLength();
     }
     
     public void init() {
@@ -77,5 +85,65 @@ public class Array {
         String[] month = { "January", "February", "March", "April", "May",
                 "June", "July", "August", "September", "October", "November",
                 "December" };
+    }
+    
+    public void twoDimensionArray() {
+        int[][] twoDim;
+        twoDim = new int[2][3];
+        
+        // towDim = new int[2][];
+        
+        // towDim = new int[][]; 컴파일 에러
+        // towDim = new int[][2]; 컴파일 에러
+        
+        // twoDim = new int[2][];
+        // twoDim[0] = new int[3];
+        // twoDim[1] = new int[2];
+        
+        // int[][] twoDim = {{1, 2, 3,}, {4, 5, 6}};
+         
+        // int[][] twoDim = new int[2][3];
+        // twoDim [0][0] = 1;
+        // twoDim [0][1] = 2;
+        // twoDim [0][2] = 3;
+        // twoDim [1][0] = 4;
+        // twoDim [1][1] = 5;
+        // twoDim [1][2] = 6;
+    }
+    
+    public void printArrayLength() {
+        
+        int monthLength = month.length;
+        System.out.println(monthLength);
+        
+        int[][] twoDim = {{1, 2, 3}, {4, 5, 6}};
+        System.out.println("twoDim.length = " + twoDim.length);
+        System.out.println("twoDim[0].length = " + twoDim[0].length);
+        
+        int twoDim1Length = twoDim[1].length;
+        
+        // int twoDim0_0Length = twoDim[0][0].length 해당 배열의 값
+        
+        int twoDimLength = twoDim.length;
+        for(int loop1=0; loop1<twoDimLength; loop1++) {
+            int twoDim2Length = twoDim[loop1].length;
+            for(int loop2=0; loop2<twoDim2Length; loop2++) {
+                System.out.println("twoDim[" + loop1 + "][" + loop2 + "]" + twoDim[loop1][loop2]);
+            }
+        }
+        
+        for(String tempMonth : month) {
+            System.out.println(tempMonth);
+        }
+        
+        int count1 = 0;
+        for(int[] tempArray : twoDim) {
+            int count2 = 0;
+            for(int temp : tempArray) {
+                System.out.println("twoDim[" + count1 + "][" + count2 + "]=" + temp);
+                count2++;
+            }
+            count1++;
+        }
     }
 }
