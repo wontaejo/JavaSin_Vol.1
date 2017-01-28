@@ -12,7 +12,8 @@ public class ReferenceTypes {
         ReferenceTypes reference = new ReferenceTypes();
         //MemberDTO.staticMethod();
         //reference.checkMemberDTOName();
-        reference.makeStaticBlockObject();
+        //reference.makeStaticBlockObject();
+        reference.callPassByValue();
     }
     
     public void makeMemberObject() {
@@ -66,4 +67,36 @@ public class ReferenceTypes {
         System.out.println("Created block2");
         System.out.println("data=" + StaticBlock.getData());
     }
+    
+    public void callPassByValue() {
+        int a = 10;
+        String b = "b";
+        
+        MemberDTO member = new MemberDTO("Sangmin");
+        passByValue(a, b, member);
+        
+        System.out.println("callPassByValue method result !!!");
+        System.out.println("a=" + a);
+        System.out.println("b=" + b);
+        System.out.println("member.name=" + member.name);
+    }
+    
+    public void passByValue(int a, String b, MemberDTO member) {
+        a = 20;
+        b = "z";
+        //member = new MemberDTO("SungChoon");
+        member.name = "SungChoon";
+        System.out.println("passByValue method result !!!");
+        System.out.println("a=" + a);
+        System.out.println("b=" + b);
+        System.out.println("member.name=" + member.name);
+    }
+    // passByValue method result !!!
+    // a = 20
+    // b = z
+    // member.name = SungChoon
+    // callPassByValue method result !!!
+    // a = 10
+    // b = b
+    // member.name = Sangmin -> SungChoon
 }
