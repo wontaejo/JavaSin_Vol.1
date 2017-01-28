@@ -1,6 +1,6 @@
 
 public class MemberDTO {
-    public String name;
+    public  String name;
     public String phone;
     public String email;
     
@@ -40,5 +40,9 @@ public class MemberDTO {
         this.email = email;
     }
     
+    public static void staticMethod() {
+        System.out.println("This is a static method.");
+        //System.out.println(name);
+    }
 }
 

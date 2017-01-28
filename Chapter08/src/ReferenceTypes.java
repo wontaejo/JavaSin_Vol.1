@@ -10,6 +10,9 @@ public class ReferenceTypes {
     
     public static void main(String[] args) {
         ReferenceTypes reference = new ReferenceTypes();
+        //MemberDTO.staticMethod();
+        //reference.checkMemberDTOName();
+        reference.makeStaticBlockObject();
     }
     
     public void makeMemberObject() {
@@ -44,5 +47,23 @@ public class ReferenceTypes {
     public String stringReturn() {
         String returnString = "Return value";
         return returnString;
+    }
+    
+    public void checkMemberDTOName() {
+        MemberDTO dto1 = new MemberDTO("Sangmin");
+        System.out.println(dto1.name);
+        MemberDTO dto2 = new MemberDTO("Sungchoon");
+        System.out.println(dto1.name);
+    }
+    
+    public void makeStaticBlockObject() {
+        System.out.println("data=" + StaticBlock.getData());
+        System.out.println("Creating block1");
+        StaticBlock block1 = new StaticBlock();
+        System.out.println("Created block1");
+        System.out.println("Creating block2");
+        StaticBlock block2 = new StaticBlock();
+        System.out.println("Created block2");
+        System.out.println("data=" + StaticBlock.getData());
     }
 }
