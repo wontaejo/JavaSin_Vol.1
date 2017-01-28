@@ -13,7 +13,10 @@ public class ReferenceTypes {
         //MemberDTO.staticMethod();
         //reference.checkMemberDTOName();
         //reference.makeStaticBlockObject();
-        reference.callPassByValue();
+        //reference.callPassByValue();
+        //reference.calculateNumbers2(1,2,3,4,5);
+        MemberDTO dto = new MemberDTO("Sangmin", "010XXXXYYYY", "god@godofjava.com");
+        System.out.printf("Name:%s\n Phone:%s\n E-Mail:%s\n", dto.name, dto.phone, dto.email);
     }
     
     public void makeMemberObject() {
@@ -91,12 +94,24 @@ public class ReferenceTypes {
         System.out.println("b=" + b);
         System.out.println("member.name=" + member.name);
     }
-    // passByValue method result !!!
-    // a = 20
-    // b = z
-    // member.name = SungChoon
-    // callPassByValue method result !!!
-    // a = 10
-    // b = b
-    // member.name = Sangmin -> SungChoon
+    
+    public void calculateNumbers1(int[] numbers) {
+        
+    }
+    
+    public void calculateNumbers2(int... numbers) {
+        int total = 0;
+        for(int number : numbers) {
+            total += number;
+        }
+        System.out.println("Total=" + total);
+    }
+    
+    public void arbitrary(String message, int... numbers) {
+        
+    }
+    
+    // 잘못된 예
+    //public void arbitrary(int... numbers, String message) {       
+    //}
 }
