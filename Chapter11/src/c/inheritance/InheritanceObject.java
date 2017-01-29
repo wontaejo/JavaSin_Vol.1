@@ -6,10 +6,25 @@ public class InheritanceObject {
         //obj.toStringMethod(obj);
         //obj.toStringMethod2();
         
-        MemberDTO member = new MemberDTO("Sangmin", "010XXXXYYYY", "javauning@gmail.com");
+        //MemberDTO member = new MemberDTO("Sangmin", "010XXXXYYYY", "javauning@gmail.com");
         //System.out.println("name" + member.name + "phone" + member.phone + "email" + member.email);
-        System.out.println(member.toString());
-        System.out.println(member);
+        //System.out.println(member.toString());
+        //System.out.println(member);
+        
+        MemberDTO obj1 = new MemberDTO("Sangmin");
+        MemberDTO obj2 = new MemberDTO("Sangmin");
+        /*
+        if(obj1 == obj2) {
+            System.out.println("obj1 and obj2 is same");
+        } else {
+            System.out.println("obj1 and obj2 is different");
+        }
+        */
+        if(obj1.equals(obj2)) {
+            System.out.println("obj1 and obj2 is same");
+        } else {
+            System.out.println("obj1 and obj2 is different");
+        }
         
     }
     
