@@ -19,16 +19,18 @@ public class MemberDTO {
     }
 
     public boolean equals(Object obj) {
-        if(this == obj) return true;
-        if(obj == null) return false;
-        if(getClass() != obj.getClass()) return false;
+        if(this == obj) return true;    // 주소가 같으므로 당연히 true
+        if(obj == null) return false;   // obj가 null 이므로 당연히 false
+        if(getClass() != obj.getClass()) return false;  // 클레스의 종류가 다르므로 false
         
-        MemberDTO other = (MemberDTO) obj;
+        MemberDTO other = (MemberDTO) obj; // 같은 클래스이므로 형 변환 실행
         
-        if(name == null) {
-            if(other.name != null) return false;
-        } else if (!name.equals(other.name)) return false;
+        // 이제부터는 각 인스턴스가 변수가 같은지 비교하는 작업 수행
+        if(name == null) { // name 가 null 일 때
+            if(other.name != null) return false; // 비교 대상의 name이 null이 아니면 false
+        } else if (!name.equals(other.name)) return false; // 두 개의 name 값이 다르면 false
         
+        // name와 같은 비교 수행
         if(phone == null) {
             if(other.phone != null) return false;
         } else if (!phone.equals(other.phone)) return false;
@@ -37,6 +39,7 @@ public class MemberDTO {
             if(other.email != null) return false;
         } else if (!email.equals(other.email)) return false;
         
+        // 모든 조건을 거쳐서 false를 리턴하지 않는 객체는 같은 값을 가지는 객체로 생각해서 true 리턴
         return true;
     }
     
