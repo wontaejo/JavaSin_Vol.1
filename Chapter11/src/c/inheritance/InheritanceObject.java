@@ -6,6 +6,10 @@ public class InheritanceObject {
         obj.toStringMethod(obj);
         System.out.println("=============");
         obj.toStringMethod2();
+        
+        MemberDTO member = new MemberDTO("Sangmin", "010XXXXYYYY", "javatuning@gmail.com");
+        System.out.println("name" + member.name + "phone" + member.phone + "email" + member.email);
+        
     }
     
     public void toStringMethod(InheritanceObject obj) {
@@ -20,5 +24,8 @@ public class InheritanceObject {
         System.out.println("plus " +this);
     }
     
+    public String toString() {
+        return "InhertianceObject class";
+    }
 }
 
