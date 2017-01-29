@@ -43,6 +43,15 @@ public class MemberDTO {
         return true;
     }
     
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((email == null) ? 0 : email.hashCode());
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + ((phone == null) ? 0 : phone.hashCode());
+        return result;
+    }
+    
     public String toString() {
         return "Name = " + name + ", Phone = " + phone + ", Email = " + email;
     }
