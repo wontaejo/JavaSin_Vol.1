@@ -5,7 +5,8 @@ public class ExceptionSample {
     public static void main(String[] args) {
         ExceptionSample sample = new ExceptionSample();
         //sample.arrayOutOfBounds();
-        sample.finallySample();
+        //sample.finallySample();
+        sample.mulitCatch();
     }
     
     public void arrayOutOfBounds() {
@@ -30,5 +31,16 @@ public class ExceptionSample {
             System.out.println("Here is finally");
         }
         System.out.println("This code should run.");
+    }
+    
+    public void mulitCatch() {
+        int[] intArray = new int[5];
+        try {
+            System.out.println(intArray[5]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException occured");
+        } catch (Exception e) {
+            System.out.println("Exception occured");
+        }
     }
 }
