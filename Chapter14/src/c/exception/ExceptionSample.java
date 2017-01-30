@@ -24,6 +24,7 @@ public class ExceptionSample {
     public void finallySample() {
         int[] intArray = new int[5];
         try {
+            intArray = null;
             System.out.println(intArray[4]);
         } catch (Exception e) {
             System.out.println(intArray.length);
@@ -36,7 +37,10 @@ public class ExceptionSample {
     public void mulitCatch() {
         int[] intArray = new int[5];
         try {
+            intArray = null;
             System.out.println(intArray[5]);
+        //} catch (NullPointerException e) {
+        //    System.out.println("NullPointerException occured");
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("ArrayIndexOutOfBoundsException occured");
         } catch (Exception e) {
