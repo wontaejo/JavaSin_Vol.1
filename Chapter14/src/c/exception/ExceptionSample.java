@@ -9,6 +9,11 @@ public class ExceptionSample {
     
     public void arrayOutOfBounds() {
         int[] intArray = new int[5];
-        System.out.println(intArray[5]);
+        try {
+            System.out.println(intArray[5]);
+        } catch (Exception e) {
+            System.out.println("Exception occured.");
+        }
+        System.out.println("This code should run.");
     }
 }
