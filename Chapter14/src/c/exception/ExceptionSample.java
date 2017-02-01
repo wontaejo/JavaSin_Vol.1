@@ -6,7 +6,8 @@ public class ExceptionSample {
         ExceptionSample sample = new ExceptionSample();
         //sample.arrayOutOfBounds();
         //sample.finallySample();
-        sample.mulitCatch();
+        //sample.mulitCatch();
+        sample.throwable();
     }
     
     public void arrayOutOfBounds() {
@@ -45,6 +46,18 @@ public class ExceptionSample {
             System.out.println("ArrayIndexOutOfBoundsException occured");
         } catch (Exception e) {
             System.out.println("Exception occured");
+        }
+    }
+    
+    public void throwable() {
+        int[] intArray = new int[5];
+        try {
+            //intArray = null;
+            System.out.println(intArray[5]);
+        } catch (Throwable t) {
+            System.out.println(t.getMessage());
+            System.out.println(t.toString());
+            t.printStackTrace();
         }
     }
 }
