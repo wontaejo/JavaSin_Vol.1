@@ -2,12 +2,17 @@ package c.exception;
 
 public class ExceptionSample {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         ExceptionSample sample = new ExceptionSample();
         //sample.arrayOutOfBounds();
         //sample.finallySample();
         //sample.mulitCatch();
-        sample.throwable();
+        //sample.throwable();
+        //try {
+            sample.throwException(13);
+        //} catch (Exception e) {
+            //e.printStackTrace();
+        //}
     }
     
     public void arrayOutOfBounds() {
@@ -59,5 +64,21 @@ public class ExceptionSample {
             System.out.println(t.toString());
             t.printStackTrace();
         }
+    }
+    
+    public void throwException(int number) throws Exception {
+        //try {
+            if(number > 2) {
+                throw new Exception("Number is over than 12");
+            }
+        //} catch (Exception e) {
+            //e.printStackTrace();
+        //}
+    }
+    
+    public void multiThrow() throws NullPointerException, ArrayIndexOutOfBoundsException {
+        int[] intArray = new int[5];
+        intArray = null;
+        System.out.println(intArray[5]);
     }
 }
