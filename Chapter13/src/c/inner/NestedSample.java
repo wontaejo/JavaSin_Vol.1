@@ -12,4 +12,11 @@ public class NestedSample {
         
         System.out.println(staticNested.getValue());
     }
+    
+    public void makeInnerObject() {
+        OuterOfInner outer = new OuterOfInner();
+        OuterOfInner.Inner inner = outer.new Inner();
+        inner.setValue(3);
+        System.out.println(inner.getValue());
+    }
 }
