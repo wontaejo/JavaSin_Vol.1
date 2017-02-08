@@ -19,4 +19,17 @@ public class NestedSample {
         inner.setValue(3);
         System.out.println(inner.getValue());
     }
+    
+    public void setButtonListener() {
+        MagicButton button = new MagicButton();
+        MagicButtonListener listener = new MagicButtonListener();
+        button.setListener(listener);
+        button.onClickProcess();
+    }
+    
+    class MagicButtonListener implements EventListener {
+        public void onClick() {
+            System.out.println("Magic Button Clicked !!!");
+        }
+    }
 }
