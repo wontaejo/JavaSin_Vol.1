@@ -7,11 +7,13 @@ public class NestedValueReference {
     private int privateInt = 3;
     static int staticInt = 4;
     static class StaticNested {
+        private int staticNestedInt = 99;
         public void setValue() {
             staticInt = 14;
         }
     }
     class Inner {
+        private  int innerValue = 100;
         public void setValue() {
             publicInt = 20;
             protectedInt = 21;
@@ -30,5 +32,11 @@ public class NestedValueReference {
                 staticInt = 34;
             }
         };
+    }
+    public void setValue(int value) {
+        StaticNested nested = new StaticNested();
+        nested.staticNestedInt = value;
+        Inner inner = new Inner();
+        inner.innerValue = value;
     }
 }
