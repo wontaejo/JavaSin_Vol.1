@@ -22,11 +22,19 @@ public class NestedSample {
         MagicButton button = new MagicButton();
         //MagicButtonListener listener = new MagicButtonListener();
         //button.setListener(listener);
+        /*
         button.setListener(new EventListener() {
             public void onClick() {
                 System.out.println("Magic Button Clicked !!!");
             }
         });
+        */
+        EventListener listener = new EventListener() {
+            public void onClick() {
+                System.out.println("Magic Button Clicked !!!");
+            }
+        };
+        button.setListener(listener);
         button.onClkickProcess();
     }
     class MagicButtonListener implements EventListener {
