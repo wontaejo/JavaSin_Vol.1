@@ -7,7 +7,7 @@ public class Parent {
     public Parent(String name) {
         System.out.println("Parent(String) Constructor");
     }
-    public void printName() {
+    public void printName(String args) {
         System.out.println("PrintName() - Parent");
     }
 }
