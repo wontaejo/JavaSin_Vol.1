@@ -56,4 +56,9 @@ public class ExceptionSample {
             //e.printStackTrace();
         //}
     }
+    public void multiThrow() throws NullPointerException, ArrayIndexOutOfBoundsException {
+        int[] intArray = new int[5];
+        intArray = null;
+        System.out.println(intArray[5]);
+    }
 }
