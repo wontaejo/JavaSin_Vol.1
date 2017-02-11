@@ -6,8 +6,8 @@ public class ExceptionSample {
         
     }
     public void arrayOutOfBounds() {
+        int[] intArray = new int[5];
         try {
-            int[] intArray = new int[5];
             System.out.println(intArray[5]);
         } catch (Exception e) {
             
