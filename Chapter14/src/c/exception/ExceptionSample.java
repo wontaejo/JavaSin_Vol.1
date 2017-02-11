@@ -21,11 +21,14 @@ public class ExceptionSample {
     public void multiCatch() {
         int[] intArray = new int[5];
         try {
+            intArray = null;
             System.out.println(intArray[5]);
-        } catch (Exception e) {
-            System.out.println("Exception occured");
+        } catch (NullPointerException e) {
+            System.out.println("NullPointerException occured");
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("ArrayIndexOutOfBoundsException occured");
+        } catch (Exception e) {
+            System.out.println("Exception occured");
         } 
     }
 }
