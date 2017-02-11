@@ -4,7 +4,8 @@ public class ExceptionSample {
     public static void main(String[] args) {
         ExceptionSample sample = new ExceptionSample();
         //sample.arrayOutOfBounds();
-        sample.multiCatch();
+        //sample.multiCatch();
+        sample.throwable();
     }
     public void arrayOutOfBounds() {
         int[] intArray = null;
@@ -30,5 +31,14 @@ public class ExceptionSample {
         } catch (Exception e) {
             System.out.println("Exception occured");
         } 
+    }
+    public void throwable() {
+        int[] intArray = new int[5];
+        try {
+           intArray = null;
+           System.out.println(intArray[5]);
+        } catch (Throwable t) {
+            System.out.println(t.getMessage());
+        }
     }
 }
