@@ -1,16 +1,16 @@
 package c.exception;
 
 public class ExceptionSample {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         ExceptionSample sample = new ExceptionSample();
         //sample.arrayOutOfBounds();
         //sample.multiCatch();
         //sample.throwable();
-        try {
+        //try {
         sample.throwException(13);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        //} catch (Exception e) {
+            //e.printStackTrace();
+        //}
     }
     public void arrayOutOfBounds() {
         int[] intArray = null;
