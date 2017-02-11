@@ -12,6 +12,8 @@ public class ExceptionSample {
             System.out.println(intArray[5]);
         } catch (Exception e) {
             System.out.println(intArray.length);
+        } finally {
+            System.out.println("Here is finally");
         }
         System.out.println("This code should run.");
     }
