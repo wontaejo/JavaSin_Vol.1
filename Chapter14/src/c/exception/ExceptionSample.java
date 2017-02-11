@@ -38,7 +38,7 @@ public class ExceptionSample {
            intArray = null;
            System.out.println(intArray[5]);
         } catch (Throwable t) {
-            System.out.println(t.getMessage());
+            System.out.println(t.toString());
         }
     }
 }
