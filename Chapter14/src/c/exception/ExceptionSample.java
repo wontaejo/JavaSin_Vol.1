@@ -5,7 +5,8 @@ public class ExceptionSample {
         ExceptionSample sample = new ExceptionSample();
         //sample.arrayOutOfBounds();
         //sample.multiCatch();
-        sample.throwable();
+        //sample.throwable();
+        sample.throwException(5);
     }
     public void arrayOutOfBounds() {
         int[] intArray = null;
@@ -35,11 +36,20 @@ public class ExceptionSample {
     public void throwable() {
         int[] intArray = new int[5];
         try {
-           intArray = null;
+           //intArray = null;
            System.out.println(intArray[5]);
         } catch (Throwable t) {
             //System.out.println(t.toString());
             t.printStackTrace();
+        }
+    }
+    public void throwException(int number) {
+        try {
+            if(number > 12) {
+                throw new Exception("Number is over then 12");    
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
