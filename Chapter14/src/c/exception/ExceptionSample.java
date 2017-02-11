@@ -22,10 +22,10 @@ public class ExceptionSample {
         int[] intArray = new int[5];
         try {
             System.out.println(intArray[5]);
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("ArrayIndexOutOfBoundsException occured");
         } catch (Exception e) {
             System.out.println("Exception occured");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException occured");
         } 
     }
 }
