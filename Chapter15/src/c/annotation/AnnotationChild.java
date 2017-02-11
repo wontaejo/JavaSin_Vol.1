@@ -7,4 +7,7 @@ public class AnnotationChild extends Parent {
     public void printName() {
         System.out.println("AnnotationChild");
     }
+    @Deprecated
+    public void noMoreuse() {
+    }
 }
